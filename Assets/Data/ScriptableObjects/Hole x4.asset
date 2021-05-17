@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83343a396ee487d4fa21a8d01d8f0b37, type: 3}
+  m_Name: Hole x4
+  m_EditorClassIdentifier: 
+  HoleType: {fileID: 5584703985770816927, guid: 37acfa70092ed0643ac3d3ed8cb13af3, type: 3}
+  HoleCount: 4
