@@ -2,19 +2,21 @@ using UnityEngine;
 
 public class HoleStatus : MonoBehaviour
 {
-    private bool isHoleEmpty = true;
+    public bool isHoleEmpty = true;
     private GameObject characterOnHole;
-    public bool IsHoleEmpty 
-    { 
-        get { return isHoleEmpty; }
-        set { isHoleEmpty = value; }
-    }
     public GameObject CharacterOnHole
     {
         get {return characterOnHole; }
         set { characterOnHole = value; }
     }
 
+    private void Update()
+    {
+        if (!GameManager.instance.isPlaying)
+            return;
+        if (characterOnHole == null)
+            isHoleEmpty = true;
+    }
     public void onClick()
     {
         if (!isHoleEmpty)
@@ -23,6 +25,7 @@ public class HoleStatus : MonoBehaviour
             value = characterOnHole.tag == "Enemy" ? 1 : -1;
             GameManager.instance.UpdateScore(value);
             characterOnHole.SetActive(false);
+            isHoleEmpty = true;
         }
     }
 }

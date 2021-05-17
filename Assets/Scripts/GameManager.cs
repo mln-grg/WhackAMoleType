@@ -1,16 +1,19 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+    public bool isPlaying = false;
     
     [SerializeField] private Slider timerSlider;
     [SerializeField] private GameObject round1;
     [SerializeField] private GameObject round2;
     [SerializeField] private GameObject round3;
     [SerializeField] private Text scoreText;
-
+    [SerializeField] private GameObject GameOverScreen;
+    [SerializeField] private Text GameOverScore;
 
 
     [SerializeField] private float maxLifetimeRound1;
@@ -46,6 +49,8 @@ private void Start()
     }
     private void Update()
     {
+        if (!isPlaying)
+            return;
         UpdateSlider();
     }
 
@@ -84,7 +89,13 @@ private void Start()
 
     private void GameOver()
     {
-
+        isPlaying = false;
+        GameOverScore.text = scoreText.text;
+        GameOverScreen.SetActive(true);
+    }
+    public void Restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     private void ResetSlider()
     {
