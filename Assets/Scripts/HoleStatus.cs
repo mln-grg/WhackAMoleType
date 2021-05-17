@@ -2,7 +2,13 @@ using UnityEngine;
 
 public class HoleStatus : MonoBehaviour
 {
-    private bool isCharacterVisible;
+    private bool isCharacterVisible = false;
+    private GameObject characterOnHole;
+    public GameObject CharacterOnHole
+    {
+        get {return characterOnHole; }
+        set { characterOnHole = value; }
+    }
     public bool IscharacterVisible 
     { 
         get { return isCharacterVisible; }
@@ -11,7 +17,9 @@ public class HoleStatus : MonoBehaviour
 
     public void onClick()
     {
-        Debug.Log("hi");
-        Debug.Log(isCharacterVisible);
+        if (isCharacterVisible)
+        {   
+            characterOnHole.SetActive(false);
+        }
     }
 }

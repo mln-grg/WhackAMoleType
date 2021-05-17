@@ -38,7 +38,9 @@ public class Spawner : MonoBehaviour
     IEnumerator CharacterSpawned(GameObject ch, int spawnIndex)
     {
         spawnPoints[spawnIndex].GetComponent<HoleStatus>().IscharacterVisible = true;
+        spawnPoints[spawnIndex].GetComponent<HoleStatus>().CharacterOnHole = ch;
         yield return new WaitForSeconds(characterLife);
+        spawnPoints[spawnIndex].GetComponent<HoleStatus>().IscharacterVisible = false;
         Destroy(ch);
     }
 }
