@@ -2,23 +2,26 @@ using UnityEngine;
 
 public class HoleStatus : MonoBehaviour
 {
-    private bool isCharacterVisible = false;
+    private bool isHoleEmpty = true;
     private GameObject characterOnHole;
+    public bool IsHoleEmpty 
+    { 
+        get { return isHoleEmpty; }
+        set { isHoleEmpty = value; }
+    }
     public GameObject CharacterOnHole
     {
         get {return characterOnHole; }
         set { characterOnHole = value; }
     }
-    public bool IscharacterVisible 
-    { 
-        get { return isCharacterVisible; }
-        set { isCharacterVisible = value; }
-    }
 
     public void onClick()
     {
-        if (isCharacterVisible)
-        {   
+        if (!isHoleEmpty)
+        {
+            int value;
+            value = characterOnHole.tag == "Enemy" ? 1 : -1;
+            GameManager.instance.UpdateScore(value);
             characterOnHole.SetActive(false);
         }
     }
