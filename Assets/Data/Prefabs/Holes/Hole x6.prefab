@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1209642592666513272}
-  - component: {fileID: 1563598889}
+  - component: {fileID: 9010988415937987087}
   m_Layer: 0
   m_Name: Holes
   m_TagString: Untagged
@@ -38,7 +38,7 @@ Transform:
   m_Father: {fileID: 2833026588493538556}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1563598889
+--- !u!114 &9010988415937987087
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -57,17 +57,6 @@ MonoBehaviour:
   - {fileID: 2833026588497057555}
   - {fileID: 2833026588547484654}
   - {fileID: 2833026589752631765}
-  characters:
-  - {fileID: 6724903682424296866, guid: 1354306571ac2d94eaa87aa0c3ed5b3a, type: 3}
-  - {fileID: 6724903682424296866, guid: 1354306571ac2d94eaa87aa0c3ed5b3a, type: 3}
-  - {fileID: 6724903682424296866, guid: 1354306571ac2d94eaa87aa0c3ed5b3a, type: 3}
-  - {fileID: 6724903682424296866, guid: 1354306571ac2d94eaa87aa0c3ed5b3a, type: 3}
-  - {fileID: 9187477076856985960, guid: 8661b301cc07f00489fa853063a885f7, type: 3}
-  - {fileID: 7912063795847319113, guid: c624aea050c8b2e449371ee5a600d46b, type: 3}
-  - {fileID: 7821294715155374079, guid: 3b15ea48b030ec646840369b50fdfa4e, type: 3}
-  - {fileID: 579521798870006497, guid: 84bb21a4e103c20458d9c46da81de184, type: 3}
-  - {fileID: 6724903682424296866, guid: 1354306571ac2d94eaa87aa0c3ed5b3a, type: 3}
-  - {fileID: 6724903682424296866, guid: 1354306571ac2d94eaa87aa0c3ed5b3a, type: 3}
 --- !u!1 &2833026588214469441
 GameObject:
   m_ObjectHideFlags: 0

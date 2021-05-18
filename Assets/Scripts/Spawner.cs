@@ -1,10 +1,9 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
     [SerializeField] private GameObject[] spawnPoints;
-    [SerializeField] private GameObject[] characters; 
-
     private float timeIntervalBetweenSpawns;
     private float timeElapsed=0f;
 
@@ -35,11 +34,13 @@ public class Spawner : MonoBehaviour
         int spawnIndex = Random.Range(0, spawnPoints.Length);
         if (!spawnPoints[spawnIndex].GetComponent<HoleStatus>().isHoleEmpty)
             return;
-        int characterIndex = Random.Range(0, characters.Length);
+        
         float characterLife = Random.Range(1, GameManager.instance.maxCharLifetime);
 
         
-        GameObject ch = Instantiate(characters[characterIndex],transform);
+        GameObject ch = GameManager.instance.GetRandomCharacter();
+        ch.transform.position = transform.position;
+        ch.transform.parent = transform;
         
         ch.transform.localPosition = spawnPoints[spawnIndex].transform.localPosition;
         spawnPoints[spawnIndex].GetComponent<HoleStatus>().isHoleEmpty = false;

@@ -8,6 +8,7 @@ public class MainMenu : MonoBehaviour
         GameManager.instance.SetLevelType(ch);
         ch.transform.position = Vector3.zero;
         GameManager.instance.isPlaying = true;
+        GameManager.instance.StartPlaying();
         gameObject.SetActive(false);
 
     }

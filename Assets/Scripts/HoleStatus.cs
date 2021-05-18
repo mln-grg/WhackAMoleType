@@ -22,7 +22,10 @@ public class HoleStatus : MonoBehaviour
         if (!isHoleEmpty)
         {
             int value;
-            value = characterOnHole.tag == "Enemy" ? 1 : -1;
+            if (characterOnHole == null)
+                return;
+            //value = characterOnHole.tag == "Enemy" ? 1 : -1;
+            value = characterOnHole.GetComponent<EnemyStatus>().isEnemy ? 1 : -1;
             GameManager.instance.UpdateScore(value);
             characterOnHole.SetActive(false);
             isHoleEmpty = true;
