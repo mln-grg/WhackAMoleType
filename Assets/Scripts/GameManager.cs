@@ -23,6 +23,8 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private float RoundLength = 10f;
 
+    private GameObject LevelType;
+    
     private float timer;
     private int round;
     private int score;
@@ -54,6 +56,10 @@ private void Start()
         UpdateSlider();
     }
 
+    public void SetLevelType(GameObject ch)
+    {
+        LevelType = ch;
+    }
     private void UpdateSlider()
     {
         timer -= Time.deltaTime;
@@ -91,6 +97,7 @@ private void Start()
     {
         isPlaying = false;
         GameOverScore.text = scoreText.text;
+        LevelType.SetActive(false);
         GameOverScreen.SetActive(true);
     }
     public void Restart()
