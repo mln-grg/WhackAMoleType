@@ -309,7 +309,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5468997160891326497, guid: f768b344fa819874bb1012a33e31cbec, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5468997161452970972, guid: f768b344fa819874bb1012a33e31cbec, type: 3}
       propertyPath: m_Name
@@ -317,7 +317,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5468997161452970973, guid: f768b344fa819874bb1012a33e31cbec, type: 3}
       propertyPath: RoundLength
-      value: 20
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 5468997161452970973, guid: f768b344fa819874bb1012a33e31cbec, type: 3}
       propertyPath: EnemyPoolSize
